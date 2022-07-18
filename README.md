@@ -1,6 +1,7 @@
 # PWA: Just Another Text Editor
 
 ## Link
+https://radiant-earth-05732.herokuapp.com/
 
 ## Description
 The purpose of this project is to finish the development of a text editor using progressive web application concepts.  Code and a file structure for the text editor itself has already been provided, referred to as "Just Another Text Editor" (JATE).
