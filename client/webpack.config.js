@@ -38,6 +38,7 @@ module.exports = () => {
         start_url: './',
         publicPath: './',
         fingerprints: false,
+        display: "standalone",
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
