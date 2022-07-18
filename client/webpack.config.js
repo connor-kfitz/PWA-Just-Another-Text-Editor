@@ -17,6 +17,7 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
@@ -36,6 +37,7 @@ module.exports = () => {
         theme_color: '#7eb4e2',
         start_url: './',
         publicPath: './',
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -44,6 +46,7 @@ module.exports = () => {
           },
         ],
       }),
+
     ],
 
     module: {
@@ -58,7 +61,11 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-env'],
+              plugins: [
+								'@babel/plugin-proposal-object-rest-spread',
+								'@babel/transform-runtime',
+							],
             }
           }
         },
